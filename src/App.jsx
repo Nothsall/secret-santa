@@ -79,7 +79,7 @@ export default function App() {
         {currentScreen === "assignments" && (
           <>
             <h2 className="text-2xl font-bold mb-6 text-center">
-              Attributions des cadeaux
+              Attributions des cadeauxDFQTTETRETRETRE
             </h2>
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">
