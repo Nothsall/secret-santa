@@ -2,6 +2,8 @@ import { useState } from "react";
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { ParticipantInput } from "./components/ParticipantInput";
 import { AssignmentDisplay } from "./components/AssignmentDisplay";
+import Snowflakes from "./components/Snowflakes";
+import './styles/snow.css';
 
 export default function App() {
   // Tableau des participants
@@ -12,7 +14,7 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState("welcome");
 
   // Fonction pour ajouter un participant
-  const addParticipant = (name) => {
+  const addParticipant = (name) => {  
     setParticipants([...participants, name]);
   };
 
@@ -51,16 +53,15 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="flex justify-center h-screen mx-auto bg-rouge">
+      <Snowflakes />
       <div>
-        // affiche l'écran en fonction de l'état de l'application // WELCOME
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
-        // INPUT
         {currentScreen === "input" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
+            <h2 className="text-2xl font-bold mb-6 text-center stroke-2 bg-white rounded-4xl text-rouge">
               Ajoutez les participants
             </h2>
             <ParticipantInput
@@ -75,11 +76,10 @@ export default function App() {
             </div>
           </>
         )}
-        // ASSIGNMENTS
         {currentScreen === "assignments" && (
           <>
             <h2 className="text-2xl font-bold mb-6 text-center">
-              Attributions des cadeauxDFQTTETRETRETRE
+              Attributions des cadeaux
             </h2>
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">

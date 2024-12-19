@@ -2,7 +2,7 @@
 // Il prend en props le tableau de participants : participants
 // Il prend en props une fonction pour ajouter un participant : onAddParticipant
 // Il prend en props une fonction pour supprimer un participant : onRemoveParticipant
-
+import PereNoel from '../asset/pere_noel.svg';
 import { useState } from "react";
 
 export function ParticipantInput({
@@ -23,6 +23,8 @@ export function ParticipantInput({
   };
 
   return (
+    <>
+    <img src={PereNoel} alt="Père Noël" />
     <div className="space-y-4">
       // Champs de saisie pour ajouter un participant
       <div className="flex space-x-2">
@@ -55,5 +57,6 @@ export function ParticipantInput({
         ))}
       </ul>
     </div>
+    </>
   );
 }

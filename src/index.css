@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -16,4 +16,18 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
+}
+
+:root {
+      /*font*/
+      --title-font: 'Cookies', sans-serif;
+      --text-font: 'Dosis', sans-serif;
+}
+
+@theme{
+    /*color*/
+    --color-rouge: #E82828;
+    --secondary-color: #00ff00;
+    --background-color: #f0f0f0;
+    --text-color: #333333;
 }
