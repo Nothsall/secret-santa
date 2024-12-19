@@ -4,7 +4,7 @@
 export function WelcomeScreen({ onStart }) {
   return (
     <div className="text-center space-y-6">
-      <img src="/asset/pere_noel.svg" alt="" />
+      <img src="/src/asset/pere_noel.svg" alt="" />
       <h1 className="text-4xl font-bold text-primary">Secret Santa</h1>
       <p className="text-lg">
         Bienvenue dans l'application Secret Santa ! Organisez facilement votre
